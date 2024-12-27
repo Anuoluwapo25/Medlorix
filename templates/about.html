@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/static/images/FAVICON.png">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/static/css/about.css">
+
+    <!-- JavaScript -->
+    <script src="/static/js/index.js" defer></script>
+    <script src="/static/js/subcribe.js" defer></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("WesP-F72yRnUJFma5");
+      })();
+    </script>
+    <title>About Medlorix</title>
+</head>
+
+<body>
+    <header>
+        <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
+        <!-- Hamburger Icon -->
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <nav class="navigation">
+          <a href="/">HOME</a>
+          <!-- Drop down menu for services -->
+          <div class="dropdown">
+            <a href="#" class="dropbtn">SERVICES
+              <img class="dropdown-down" src="/static/images/ClinicSearchPage/dropdownIcon.png" alt="">
+            </a>
+            <div class="dropdown-content">
+              <a href="/services" class="dropdown-item">Our Services
+                <span class="dropdown-icon">→</span>
+              </a>
+              <a href="/clinicSearch" class="dropdown-item">Clinic Search
+                <span class="dropdown-icon">→</span>
+              </a>
+    
+              <a href="/bookAppointment" class="dropdown-item">See a Doctor
+                <span class="dropdown-icon">→</span>
+              </a>
+    
+              <a href="/sign-up" class="dropdown-item">AI Diagnosis
+                <span class="dropdown-icon">→</span>
+              </a>
+    
+              <a href="/career" class="dropdown-item">Careers
+                <span class="dropdown-icon">→</span>
+              </a>
+            </div>
+          </div>
+          <a href="/about">ABOUT US</a>
+          <a href="/faq">FAQS</a>
+          <a href="/contact">CONTACT</a>
+        </nav>
+        <!-- Green buttons -->
+        <a href="/services"> <button class="green">GET STARTED</button></a>
+      </header>
+
+    <!-- First section-->
+    <div id="container">
+        <div class="content">
+            <h3>About Us</h3>
+            <h2>Welcome to Medlorix</h2>
+            <p>your trusted partner in navigating health and wellness from anywhere at anytime</p>
+        </div>
+    </div>
+
+    <!-- Second section -->
+    <div id="container2">
+        <div class="image1">
+            <img src="/static/images/AboutPage/image1.png" width="601px" height="606px">
+        </div>
+        <div class="content2">
+            <h3>Who we are</h3>
+            <h2>Medlorix</h2>
+            <p>We are dedicated to revolutionizing healthcare access for individuals across Africa. Our innovative
+                platform empowers you to take charge of your health with ease and confidence. Whether you’re searching
+                for the nearest clinic, booking an appointment, or seeking a preliminary diagnosis, Medlorix is here to
+                guide you every step of the way.</p>
+        </div>
+    </div>
+
+    <!-- Third section -->
+    <div id="container3">
+        <div class="content3">
+            <h3>Our Mission</h3>
+            <h2>Revolutionizing healthcare</h2>
+            <p>We are on a mission to make healthcare accessible and straightforward, providing reliable information and
+                connecting you with the resources you need to stay healthy.</p>
+        </div>
+        <div>
+            <img src="/static/images/AboutPage/image2.png" width="630px" height="376px">
+        </div>
+    </div>
+
+    <!-- Fourth section -->
+    <div id="container4">
+        <div class="content4">
+            <h3>Our Services</h3>
+            <h2>What We Offer</h2>
+            <p>Our range of healthcare services and tools includes</p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="/static/images/AboutPage/Icons/solar_map-point-hospital-bold-duotone.svg" alt="Clinic Search Icon">
+                <div class="card-text">
+                    <h3>CLINIC SEARCH</h3>
+                    <p>Helping you locate the best healthcare facilities around you</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/static/images/AboutPage/Icons/fontisto_doctor.svg" alt="See a Doctor Icon">
+                <div class="card-text">
+                    <h3>SEE A DOCTOR</h3>
+                    <p>Speak to a doctor from wherever you are at any time</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/static/images/AboutPage/Icons/streamline_medical-search-diagnosis-solid.svg"
+                    alt="AI-Based Diagnosis Icon">
+                <div class="card-text">
+                    <h3>AI-BASED DIAGNOSIS</h3>
+                    <p>AI-driven symptoms and preliminary diagnosis</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/static/images/AboutPage/Icons/jam_first-aid-f.svg" alt="Emergency Guidance Icon">
+                <div class="card-text">
+                    <h3>EMERGENCY GUIDANCE</h3>
+                    <p>Manage emergency situations with AI first aid guidance</p>
+                </div>
+            </div>
+        </div>
+        <a href="/static/src/services.html"><button class="green2">GET STARTED</button></a>
+    </div>
+
+    <!-- Fifth section -->
+    <div id="container5">
+        <div class="content5">
+            <h3>Our Team</h3>
+            <h2>Our team is at the heart of everything we do</h2>
+            <p>We are a diverse group of passionate professionals dedicated to transforming healthcare accessibility
+                across Africa.</p>
+        </div>
+        <div class="meet-the-team-container">
+            <div class="meet-the-team">
+                <div class="team-member">
+                    <img src="/static/images/AboutPage/Team/Fawazpicture.jpg" alt="Team member 1" class="team-image">
+                    <div class="team-content">
+                        <h3>Ope Fawaz Ademola</h3>
+                        <p>Team Lead & Backend Developer</p>
+                        <a href="https://www.linkedin.com/in/fawazope/">
+                            <img src="/static/images/AboutPage/Icons/entypo-social_linkedin-with-circle.png">
+                        </a>
+                        <a href="https://x.com/Physayo">
+                            <img src="/static/images/AboutPage/Icons/Vector(3).png" alt="Twitter">
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/static/images/AboutPage/Team/MogajiBolajiAbdullah.jpg" alt="Team member 2"
+                        class="team-image">
+                    <div class="team-content">
+                        <h3>Mogaji Bolaji Abdullah</h3>
+                        <p>UI/UX Designer</p>
+                        <a href="https://www.linkedin.com/in/mogaji-bolaji-abdullah-134a82220">
+                            <img src="/static/images/AboutPage/Icons/entypo-social_linkedin-with-circle.png">
+                        </a>
+                        <a href="https://x.com/mjdsgns/">
+                            <img src="/static/images/AboutPage/Icons/Vector(3).png" alt="Twitter">
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/static/images/AboutPage/Team/AbioyeOlajide.jpg" alt="Team member 3" class="team-image">
+                    <div class="team-content">
+                        <h3>Abioye Olajide Abdullateef </h3>
+                        <p>Frontend Developer</p>
+                        <a href="https://linkedin.com/in/abioye-olajide-abdullateef/">
+                            <img src="/static/images/AboutPage/Icons/entypo-social_linkedin-with-circle.png">
+                        </a>
+                        <a href="https://x.com/OlajideAbioye/">
+                            <img src="/static/images/AboutPage/Icons/Vector(3).png" alt="Twitter">
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/static/images/AboutPage/Team/UkpongZion.jpg" alt="Team member 5" class="team-image">
+                    <div class="team-content">
+                        <h3>Ukpong Zion</h3>
+                        <p>Frontend Developer</p>
+                        <a href="https://www.linkedin.com/in/zion-ukpong-073891253/">
+                            <img src="/static/images/AboutPage/Icons/entypo-social_linkedin-with-circle.png">
+                        </a>
+                        <a href="https://x.com/tega_zion">
+                            <img src="/static/images/AboutPage/Icons/Vector(3).png" alt="Twitter">
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/static/images/AboutPage/Team/EzemaMabelEbele.jpg" alt="Team member 1" class="team-image">
+                    <div class="team-content">
+                        <h3>Ezema Mabel Ebele</h3>
+                        <p>Frontend Developer</p>
+                        <a href="https://www.linkedin.com/in/mabel-ezema-287940231/">
+                            <img src="/static/images/AboutPage/Icons/entypo-social_linkedin-with-circle.png">
+                        </a>
+                        <a href="https://x.com/EbeleMaybel">
+                            <img src="/static/images/AboutPage/Icons/Vector(3).png" alt="Twitter">
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/static/images/AboutPage/Team/SuleAbdulhakeem.jpg" alt="Team member 4" class="team-image">
+                    <div class="team-content">
+                        <h3>Sule Abdulhakeem</h3>
+                        <p>Backend Developer</p>
+                        <a href="https://www.linkedin.com/in/abdulhakeem-sule-20558b249/">
+                            <img src="/static/images/AboutPage/Icons/entypo-social_linkedin-with-circle.png">
+                        </a>
+                        <a href="https://x.com/hakiimii18/">
+                            <img src="/static/images/AboutPage/Icons/Vector(3).png" alt="Twitter">
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/static/images/AboutPage/Team/AnuoluwapoAli.jpg" alt="Team member 1" class="team-image">
+                    <div class="team-content">
+                        <h3>Ali Anuoluwapo</h3>
+                        <p>Backend Developer</p>
+                        <a href="https://www.linkedin.com/in/anuoluwapo-ali-211762260/">
+                            <img src="/static/images/AboutPage/Icons/entypo-social_linkedin-with-circle.png">
+                        </a>
+                        <a href="https://x.com/ali_anuoluwapo">
+                            <img src="/static/images/AboutPage/Icons/Vector(3).png" alt="Twitter">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- Subscribe Section -->
+    <div id="subscribe">
+        <div class="top-layer">
+            <h2>Stay up to date on healthy living</h2>
+            <p>
+                Be the first to receive expert insights, practical advice, and
+                exclusive content directly to your inbox.
+            </p>
+        </div>
+        <div class="bottom-layer">
+            <input type="email" id="emailInput" placeholder="Enter your email" />
+            <button id="subscribeButton">SUBSCRIBE</button>
+        </div>
+        <p id="alertMessage"></p>
+      </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+    
+          <div class="main-footer">
+            <div class="logo-about">
+              <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Brand Logo"></a>
+              <p>
+                simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one
+                easy-to-use platform.
+              </p>
+              <div class="social-media">
+                <a href=""><img src="/static/images/Icons/google.png" alt="Google"></a>
+                <a href=""><img src="/static/images/Icons/facebook.png" alt="Facebook"></a>
+                <a href=""><img src="/static/images/Icons/twitter.png" alt="Twitter"></a>
+                <a href=""><img src="/static/images/Icons/instagram.png" alt="Instagram"></a>
+              </div>
+            </div>
+          </div>
+          <div class="firstlayer">
+            <div class="company">
+              <p><span>Company</span></p>
+              <a href="/about">About us</a>
+              <a href="/about">Our mission</a>
+              <a href="/about">Our Team</a>
+            </div>
+            <div class="company">
+              <p><span>Our Services</span></p>
+              <a href="/clinicSearch">Clinic Search</a>
+              <a href="/sign-up">AI-Based Diagnosis</a>
+              <a href="/contact">Contact Us</a>
+            </div>
+            <div class="company">
+              <p><span>Legal</span></p>
+              <a href="/terms">Privacy</a>
+              <a href="/terms">Terms</a>
+              <a href="/terms">Security</a>
+            </div>
+          </div>
+        </div>
+        <!-- Back to top arrow -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+          <img src="/static/images/Icons/up-arrow.svg" />
+        </button>
+        <div class="lastlayer">
+          <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
+          <div>
+            <a href="/terms"><p>Terms and Conditions </p></a>
+            <a href="/terms"><p>Privacy Policy</p></a>
+          </div>
+        </div>
+      </footer>
+</body>
+
+</html>

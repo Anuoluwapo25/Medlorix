@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medlorix Signup</title>
+    <link rel="stylesheet" href="/static/css/sign-up2.css">
+</head>
+<body>
+    <div class="logo">
+      <a href="/"><img src="/static/images/Medlorix-logo.svg" alt="Medlorix Logo"></a>   
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <h2>Get started today</h2>
+            <p>Create your account now to get more personalized results</p>
+            <div class="step-indicator">
+                 <a href="/sign-up"><span>&larr;</span></a> Step 2 of 2
+            </div>
+            <form id="signupForm">
+                <div class="input-group">
+                    <label for="password">Create Password</label>
+                    <input type="password" id="password" placeholder="Enter your secret words">
+                    <span class="toggle-password">&#128065;</span>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm the secret words you entered above">
+                    <span class="toggle-password">&#128065;</span>
+                </div>
+                <div class="terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I have read and agreed to the <span><a href="/terms">terms and conditions</a> </span> of Medlorix.</label>
+                </div>
+                <div class="create">
+                    <button type="submit" id="submitButton">Create Account</button>
+                    <span id="loadingSpinner" style="display: none;">Loading...</span>
+                 </div>
+            </form>
+            <p class="signin">Already have an account? <a href="/login"> Sign in</a></p>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer">
+        <div class="lastlayer">
+            <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
+            <div>
+                <a href="/terms"><p>Terms and Conditions </p></a>
+                <a href="/terms"><p>Privacy Policy</p></a>
+              </div>
+        </div>
+        </div>
+    </footer>
+    <script type="module" src="/static/js/firebase_config.js"></script>
+    <script type="module" src="/static/js/sign-up2.js"></script>
+</body>
+</html>

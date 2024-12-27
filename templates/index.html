@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medlorix │ Welcome</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/static/images/FAVICON.png">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/static/css/index.css">
+  <!-- JavaScript -->
+  <script src="/static/js/index.js" defer></script>
+  <script src="/static/js/subcribe.js" defer></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("WesP-F72yRnUJFma5");
+      })();
+    </script>
+</head>
+
+<body>
+  <header>
+    <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
+    <!-- Hamburger Icon -->
+    <div class="hamburger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav class="navigation">
+      <a href="/">HOME</a>
+      <!-- Drop down menu for services -->
+      <div class="dropdown">
+        <a href="#" class="dropbtn">SERVICES
+          <img class="dropdown-down" src="/static/images/Clinic Search Page/dropdownIcon.png" alt="">
+        </a>
+        <div class="dropdown-content">
+          <a href="/services" class="dropdown-item">Our Services
+            <span class="dropdown-icon">→</span>
+          </a>
+          <a href="/clinicSearch" class="dropdown-item">Clinic Search
+            <span class="dropdown-icon">→</span>
+          </a>
+
+          <a href="/bookAppointment" class="dropdown-item">See a Doctor
+            <span class="dropdown-icon">→</span>
+          </a>
+
+          <a href="/sign-up" class="dropdown-item">AI Diagnosis
+            <span class="dropdown-icon">→</span>
+          </a>
+
+          <a href="/career" class="dropdown-item">Careers
+            <span class="dropdown-icon">→</span>
+          </a>
+        </div>
+      </div>
+      <a href="/about">ABOUT US</a>
+      <a href="/faq">FAQS</a>
+      <a href="/contact">CONTACT</a>
+    </nav>
+    <!-- Green buttons -->
+    <a href="/services"> <button class="green">GET STARTED</button></a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Take a step towards <br> a healthier & happier you!</h2>
+      <img src="/static/images/HomePage/Hero/Vector.svg" alt="vector image of a bent line">
+      <p>Medlorix is a secured health system allows you to search for nearby clinics, book appointments, get symptom
+        analysis, and access health insights all in one place, anywhere & anytime.
+      </p>
+      <!--Blue buttons  -->
+      <button class="blue"><a href="/services">GET STARTED NOW</a></button>
+    </div>
+    <div class="hero-image">
+      <img class="im" src="/static/images/HomePage/Hero/Rectangle2.png">
+    </div>
+  </section>
+
+  <!-- Our Mission -->
+  <section class="mission">
+    <div class="mission-image">
+      <img class="im" src="/static/images/HomePage/Mission/mission.png">
+    </div>
+    <div class="mission-text">
+      <h3>Our Mission</h3>
+      <h2>Revolutionizing Healthcare</h2>
+      <p>We are on a mission to make healthcare accessible and straightforward, providing reliable information and
+        connecting you with the resources you need to stay healthy.</p>
+
+      <button class="green"><a href="/about">LEARN MORE</a> </button>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h3>Our Services</h3>
+    <h2>Our Healthcare Services</h2>
+    <p class="tip-p">Explore our range of services</p>
+
+    <div class="services-container">
+      <div class="service-card">
+        <div>
+          <img src="/static/images/HomePage/Services/Image-1.png" alt="Image of two doctors">
+          <h4>Clinic Search</h4>
+          <p>Easily find the nearest clinics across Africa by selecting your country, state, and local area. Our
+            intuitive search tool helps you locate the best healthcare facilities and nearby bus stops for quick access.
+          </p>
+        </div>
+
+        <button class="card-btn"><a href="/clinicSearch">SEARCH NOW</a> </button>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <img src="/static/images/HomePage/Services/Image-2.png" alt="Image of a doctor and his patient ">
+          <h4>See a doctor</h4>
+          <p>Book appointments effortlessly with your chosen hospital. View real-time availability, read customer
+            reviews, and schedule your visit.</p>
+        </div>
+
+        <button class="card-btn"><a href="/bookAppointment">BOOK NOW</a></button>
+
+      </div>
+
+      <div class="service-card">
+        <div>
+          <img src="/static/images/HomePage/Services/Image-3.png" alt="Image of a phone ">
+          <h4>AI-based Diagnosis</h4>
+          <p>Input your symptoms and receive a preliminary diagnosis from our AI-driven tool. While not a substitute for
+            professional advice, it offers insights to guide your next steps and encourages consulting a doctor for
+            confirmation</p>
+        </div>
+
+        <button class="card-btn"><a href="/sign-up">START</a></button>
+      </div>
+    </div>
+
+    <button class="green"> <a href="/services">SEE MORE SERVICES</a></button>
+  </section>
+
+  <!-- Why Medlorix -->
+  <section class="why-section">
+    <div class="intro">
+      <div class="intro-text">
+        <h3>Why use Medlorix?</h3>
+        <h2>Your Health, Your Time, Your Place</h2>
+        <p>Medlorix aims to enhance health management through quick and easy access to healthcare centers, and
+          connecting users with trusted medical professionals. Our goal is to empower individuals with the tools and
+          resources they need for better health and well-being.</p>
+      </div>
+
+      <div class="why-us-image">
+        <img src="/static/images/HomePage/Why/why-main.png" alt="">
+      </div>
+    </div>
+
+    <section class="features">
+      <div class="feature-row">
+        <div class="feature-item">
+          <img src="/static/images/HomePage/Why/feature-1.png" alt="stethoscope">
+          <div class="feature-text">
+            <h4>Wide Range of Health Tools for your use</h4>
+            <p>With our tailor-made health tools, you can get reliable results and insights into your health - quickly
+              and easily.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <img src="/static/images/HomePage/Why/feature-2.png" alt="stethoscope on a doctor">
+          <div class="feature-text">
+            <h4>Fast, Reliable and Confidential results</h4>
+            <p>Our innovative technology is designed to provide accurate and reliable diagnosis based on the symptoms
+              you input.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-item">
+          <img src="/static/images/HomePage/Why/feature-3.png" alt="a doctor and patient">
+          <div class="feature-text">
+            <h4>Free Doctor’s Consultation</h4>
+            <p>Our doctors are always available to walk you through your test results and recommend the next steps to
+              great health.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <img src="/static/images/HomePage/Why/feature-4.png" alt="a surgeon">
+          <div class="feature-text">
+            <h4>Accredited and Certified Partners</h4>
+            <p>With our tailor-made health tools, you can get reliable results and insights into your health - quickly
+              and easily.</p>
+          </div>
+        </div>
+
+    </section>
+
+    <button><a href="/services"> GET STARTED NOW</a></button>
+  </section>
+
+  <!-- Build Section -->
+  <section id="build">
+    <div class="build-container">
+      <div class="left-card">
+        <h2>
+          Build the future of healthcare with us
+        </h2>
+        <p>
+          Want to make an impact? Join us as we strive to provide the best healthcare experience to millions of people
+          in Africa
+        </p>
+        <button> <a href="/career">
+            BECOME OUR PARTNER
+          </a>
+        </button>
+      </div>
+      <div class="right-card">
+        <img src="/static/images/ClinicSearchPage/shakehands.png" alt="shake hands">
+      </div>
+    </div>
+    <div class="shadow_color">
+    </div>
+  </section>
+
+  <!-- Tips -->
+  <section class="tips">
+    <h2>Health & Wellness Tips</h2>
+    <p class="tip-p">Stay informed with evidence-based health contents that boosts your living experiences</p>
+
+    <div class="section-grid">
+      <div class="tip-card">
+        <img class="tip-img" src="/static/images/HomePage/Tips/ment1.png" alt="">
+        <div class="tip-text">
+          <h5>Mental Health</h5>
+          <h4>Managing and Reducing Stress </h4>
+
+          <p>
+            A feeling of constant abnormal pressure, stress can originate from different aspects of day-to-day life. It
+            can result in a variety of physical symptoms, including changes in behavior and experiencing strong
+            emotions.
+          </p>
+          <a href="https://www.news-medical.net/health/Managing-and-Reducing-Stress.aspx" target="_blank">READ MORE <img
+              src="/static/images/Icons/diagonal-upward-arrow.png" alt=""></a>
+        </div>
+      </div>
+      <div class="tip-card">
+        <img class="tip-img" src="/static/images/HomePage/Tips/ment2.png" alt="">
+        <div class="tip-text">
+          <h5>Wellness Tips</h5>
+          <h4>Managing and Reducing Stress </h4>
+
+          <p>
+            Wellness is the dynamic process of working toward achieving your maximum potential in each dimension of wellness.
+          </p>
+          <a href="https://www.geneseo.edu/cas/101-wellness-tips" target="_blank">READ MORE <img
+              src="/static/images/Icons/diagonal-upward-arrow.png" alt=""></a>
+        </div>
+
+      </div>
+    </div>
+
+    <button><a href="https://www.medicalnewstoday.com/" target="_blank" >READ MORE HEALTH TIPS</a> </button>
+  </section>
+
+
+  <!-- Subscribe Section -->
+  <div id="subscribe">
+    <div class="top-layer">
+        <h2>Stay up to date on healthy living</h2>
+        <p>
+            Be the first to receive expert insights, practical advice, and
+            exclusive content directly to your inbox.
+        </p>
+    </div>
+    <div class="bottom-layer">
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <button id="subscribeButton">SUBSCRIBE</button>
+    </div>
+    <p id="alertMessage"></p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+
+      <div class="main-footer">
+        <div class="logo-about">
+          <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Brand Logo"></a>
+          <p>
+            simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one
+            easy-to-use platform.
+          </p>
+          <div class="social-media">
+            <a href=""><img src="/static/images/Icons/google.png" alt="Google"></a>
+            <a href=""><img src="/static/images/Icons/facebook.png" alt="Facebook"></a>
+            <a href=""><img src="/static/images/Icons/twitter.png" alt="Twitter"></a>
+            <a href=""><img src="/static/images/Icons/instagram.png" alt="Instagram"></a>
+          </div>
+        </div>
+      </div>
+      <div class="firstlayer">
+        <div class="company">
+          <p><span>Company</span></p>
+          <a href="/about">About us</a>
+          <a href="/about">Our mission</a>
+          <a href="/about">Our Team</a>
+        </div>
+        <div class="company">
+          <p><span>Our Services</span></p>
+          <a href="/clinicSearch">Clinic Search</a>
+          <a href="/sign-up">AI-Based Diagnosis</a>
+          <a href="/contact">Contact Us</a>
+        </div>
+        <div class="company">
+          <p><span>Legal</span></p>
+          <a href="/terms">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/terms">Security</a>
+        </div>
+      </div>
+    </div>
+    <!-- Back to top arrow -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <img src="/static/images/Icons/up-arrow.svg" />
+    </button>
+    <div class="lastlayer">
+      <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
+      <div>
+        <a href="/terms"><p>Terms and Conditions </p></a>
+        <a href="/terms"><p>Privacy Policy</p></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

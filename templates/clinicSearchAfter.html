@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/static/images/FAVICON.png">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/static/css/clinicSearchAfter.css">
+
+  <!-- JavaScript -->
+  <script src="/" defer></script>
+  <script src="/static/js/bookAppointment.js" defer></script>
+  <script src="/static/js/subcribe.js" defer></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("WesP-F72yRnUJFma5");
+      })();
+    </script>
+  
+  <title>Medlorix │ Clinic Search</title>
+</head>
+
+<body>
+  <header>
+    <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Medlorix logo"></a>
+    <!-- Hamburger Icon -->
+    <div class="hamburger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav class="navigation">
+      <a href="/">HOME</a>
+      <!-- Drop down menu for services -->
+      <div class="dropdown">
+        <a href="#" class="dropbtn">SERVICES
+          <img class="dropdown-down" src="/static/images/ClinicSearchPage/dropdownIcon.png" alt="">
+        </a>
+        <div class="dropdown-content">
+          <a href="/services" class="dropdown-item">Our Services
+            <span class="dropdown-icon">→</span>
+          </a>
+          <a href="/clinicSearch" class="dropdown-item">Clinic Search
+            <span class="dropdown-icon">→</span>
+          </a>
+
+          <a href="/bookAppointment" class="dropdown-item">See a Doctor
+            <span class="dropdown-icon">→</span>
+          </a>
+
+          <a href="/sign-up" class="dropdown-item">AI Diagnosis
+            <span class="dropdown-icon">→</span>
+          </a>
+
+          <a href="/career" class="dropdown-item">Careers
+            <span class="dropdown-icon">→</span>
+          </a>
+        </div>
+      </div>
+      <a href="/about">ABOUT US</a>
+      <a href="/faq">FAQS</a>
+      <a href="/contact">CONTACT</a>
+    </nav>
+    <!-- Green buttons -->
+    <a href="/services"> <button class="green">GET STARTED</button></a>
+  </header>
+
+  <!-- Hero Section -->
+  <div id="hero">
+    <div class="search">
+      <h2>Search for a nearby Clinic</h2>
+      <p>
+        Easily find the nearest clinics across Africa by selecting your
+        country, state, and local area. Our intuitive search tool helps you
+        locate the best healthcare facilities and nearby bus stops for quick
+        access.
+      </p>
+    </div>
+    <div class="location">
+      <div class="located-near">
+        <p>Located Near:</p>
+      </div>
+      <div class="map-inputs">
+        <div class="input-fields">
+          <select
+            type="search"
+            placeholder="Enter your Country"
+            id="country"
+            name="country"
+            onchange="loadStates()"
+            class="custom-dropdown"
+          >
+            <option value="" selected>Enter your Country</option>
+          </select>
+          <!-- <div class="dropdown-container">
+            <img src="/images/Icons/dropdown_icon.png" alt="dropdown" />
+          </div> -->
+        </div>
+        <div class="input-fields">
+          <select
+            type="search"
+            placeholder="Enter your State"
+            id="state"
+            name="state"
+            onchange="loadCities()"
+            class="custom-dropdown"
+          >
+            <option value="" selected>Enter your State</option>
+          </select>
+          <!-- <div class="dropdown-container">
+            <img src="/images/Icons/dropdown_icon.png" alt="dropdown" />
+          </div> -->
+        </div>
+        <div class="input-fields">
+          <select
+            type="search"
+            placeholder="Enter your Local Government Area / Province"
+            id="local-government"
+            name="local_government"
+            class="custom-dropdown"
+          >
+            <option value="" selected>Enter your City</option>
+          </select>
+          <!-- <div class="dropdown-container">
+            <img src="/images/Icons/dropdown_icon.png" alt="dropdown" />
+          </div> -->
+        </div>
+        <div class="input-fields">
+          <input
+            type="search"
+            placeholder="Enter Nearest Bus Stop / Landmark"
+          />
+          <!-- <div class="dropdown-container">
+            <img src="/images/Icons/dropdown_icon.png" alt="dropdown" />
+          </div> -->
+        </div>
+      </div>
+      <div class="results">
+        <p>Results: </p>
+        <img src="/static/images/ClinicSearchPage/caution-Icon.png" alt="">
+      </div>
+      <div class="searched-container">
+        <div class="searched-cardpreview">
+          <div class="card-firstlayer">
+            <div class="hospital-name-card">
+              <div class="hospital-name">
+                <p>Gbobi Hospital</p>
+              </div>
+              <div class="rating">
+                <p>3.9</p>
+                <div>
+                  <img class="star" src="/static/images/ClinicSearchPage/Star12.png" alt="">
+                  <img class="star" src="/static/images/ClinicSearchPage/Star12.png" alt="">
+                  <img class="star" src="/static/images/ClinicSearchPage/Star12.png" alt="">
+                  <img class="star" src="/static/images/ClinicSearchPage/Star12.png" alt="">
+                  <img class="star" src=" /static/images/ClinicSearchPage/Star13.png" alt="">
+                </div>
+                <p>
+                  (30)
+                </p>
+              </div>
+            </div>
+            <div class="direction">
+              <img src="/static/static/images/ClinicSearchPage/ri_direction-line.png" alt="">
+              <p>Directions</p>
+            </div>
+          </div>
+          <div class="card-secondlayer">
+            <p>General Hospital</p>
+            <img src="/images/ClinicSearchPage/icon.png" alt="">
+            <p><span>1, Tanke Junction, Ilorin, <br>Kwara state, Nigeira</span></p>
+          </div>
+          <div class="card-thirdlayer">
+            <div class="no-card">
+              <div class="phone-no">
+                <img src="/static/images/ClinicSearchPage/Phonecall.png" alt="">
+                <p>+(234)812 495 3729</p>
+              </div>
+              <div class="available">
+                <p><span>Available</span></p>
+                <p>Less busy</p>
+              </div>
+            </div>
+            <div class="book-appointment">
+              <button>
+                BOOK APPOINTMENT
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="searched-cardpreview">
+          <div class="card-firstlayer">
+            <div class="hospital-name-card">
+              <div class="hospital-name">
+                <p>Gbobi Hospital</p>
+              </div>
+              <div class="rating">
+                <p>3.9</p>
+                <div>
+                  <img class="star" src="/static/images/ClinicSearchPage/Star12.png" alt="">
+                  <img class="star" src="/static/images/ClinicSearchPage/Star12.png" alt="">
+                  <img class="star" src="/static/images/ClinicSearchPage/Star12.png" alt="">
+                  <img class="star" src="/static/images/ClinicSearchPage/Star12.png" alt="">
+                  <img class="star" src="/static/images/ClinicSearchPage/Star13.png" alt="">
+                </div>
+                <p>
+                  (30)
+                </p>
+              </div>
+            </div>
+            <div class="direction">
+              <img src="/static/images/ClinicSearchPage/ri_direction-line.png" alt="">
+              <p>Directions</p>
+            </div>
+          </div>
+          <div class="card-secondlayer">
+            <p>General Hospital</p>
+            <img src="/static/images/ClinicSearchPage/icon.png" alt="">
+            <p><span>1, Tanke Junction, Ilorin, <br>Kwara state, Nigeira</span></p>
+          </div>
+          <div class="card-thirdlayer">
+            <div class="no-card">
+              <div class="phone-no">
+                <img src="/static/images/ClinicSearchPage/Phonecall.png" alt="">
+                <p>+(234)812 495 3729</p>
+              </div>
+              <div class="available">
+                <p><span style="color: #CB0014;">Unavailable</span></p>
+                <p>Busy</p>
+              </div>
+            </div>
+            <div class="book-appointment">
+              <button>
+                BOOK APPOINTMENT
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="searched-cardpreview">
+          <div class="card-firstlayer">
+            <div class="hospital-name-card">
+              <div class="hospital-name">
+                <p>Gbobi Hospital</p>
+              </div>
+              <div class="rating">
+                <p>3.9</p>
+                <div>
+                  <img class="star" src="/static/images/Clinic Search Page/Star 12.png" alt="">
+                  <img class="star" src="//staticimages/Clinic Search Page/Star 12.png" alt="">
+                  <img class="star" src="/static/images/Clinic Search Page/Star 12.png" alt="">
+                  <img class="star" src="/static/images/Clinic Search Page/Star 12.png" alt="">
+                  <img class="star" src="/static/images/Clinic Search Page/Star 13.png" alt="">
+                </div>
+                <p>
+                  (30)
+                </p>
+              </div>
+            </div>
+            <div class="direction">
+              <img src="/static/images/Clinic Search Page/ri_direction-line.png" alt="">
+              <p>Directions</p>
+            </div>
+          </div>
+          <div class="card-secondlayer">
+            <p>General Hospital</p>
+            <img src="/static/images/Clinic Search Page/icon.png" alt="">
+            <p><span>1, Tanke Junction, Ilorin, <br>Kwara state, Nigeira</span></p>
+          </div>
+          <div class="card-thirdlayer">
+            <div class="no-card">
+              <div class="phone-no">
+                <img src="/static/images/Clinic Search Page/Phone call.png" alt="">
+                <p>+(234)812 495 3729</p>
+              </div>
+              <div class="available">
+                <p><span>Available</span></p>
+                <p>Less busy</p>
+              </div>
+            </div>
+            <div class="book-appointment">
+              <button>
+                BOOK APPOINTMENT
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="searched-cardpreview">
+          <div class="card-firstlayer">
+            <div class="hospital-name-card">
+              <div class="hospital-name">
+                <p>Gbobi Hospital</p>
+              </div>
+              <div class="rating">
+                <p>3.9</p>
+                <div>
+                  <img class="star" src="/static/images/Clinic Search Page/Star 12.png" alt="">
+                  <img class="star" src="/static/images/Clinic Search Page/Star 12.png" alt="">
+                  <img class="star" src="/static/images/Clinic Search Page/Star 12.png" alt="">
+                  <img class="star" src="/static/images/Clinic Search Page/Star 12.png" alt="">
+                  <img class="star" src="/static/images/Clinic Search Page/Star 13.png" alt="">
+                </div>
+                <p>
+                  (30)
+                </p>
+              </div>
+            </div>
+            <div class="direction">
+              <img src="/static/images/Clinic Search Page/ri_direction-line.png" alt="">
+              <p>Directions</p>
+            </div>
+          </div>
+          <div class="card-secondlayer">
+            <p>General Hospital</p>
+            <img src="/static/images/Clinic Search Page/icon.png" alt="">
+            <p><span>1, Tanke Junction, Ilorin, <br>Kwara state, Nigeira</span></p>
+          </div>
+          <div class="card-thirdlayer">
+            <div class="no-card">
+              <div class="phone-no">
+                <img src="/static/images/Clinic Search Page/Phone call.png" alt="">
+                <p>+(234)812 495 3729</p>
+              </div>
+              <div class="available">
+                <p><span>Available</span></p>
+                <p>Busy</p>
+              </div>
+            </div>
+            <div class="book-appointment">
+              <button>
+                BOOK APPOINTMENT
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Build Section -->
+  <div id="build">
+    <div class="build-container">
+      <div class="left-card">
+        <h2>
+          Build the future of healthcare with us
+        </h2>
+        <p>
+          Want to make an impact? Join us as we strive to provide the best healthcare experience to millions of people
+          in Africa
+        </p>
+        <button>
+          BECOME OUR PARTNER
+        </button>
+      </div>
+      <div class="right-card">
+        <img src="/static/images/Clinic Search Page/shakehands.png" alt="shake hands">
+      </div>
+    </div>
+    <div class="shadow_color">
+    </div>
+  </div>
+
+  <!-- Subscribe Section -->
+  <div id="subscribe">
+    <div class="top-layer">
+        <h2>Stay up to date on healthy living</h2>
+        <p>
+            Be the first to receive expert insights, practical advice, and
+            exclusive content directly to your inbox.
+        </p>
+    </div>
+    <div class="bottom-layer">
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <button id="subscribeButton">SUBSCRIBE</button>
+    </div>
+    <p id="alertMessage"></p>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer">
+
+      <div class="main-footer">
+        <div class="logo-about">
+          <a href="/"><img class="brand-logo" src="/static/images/Medlorix-logo.svg" alt="Brand Logo"></a>
+          <p>
+            simplifies healthcare by helping users find clinics, book appointments, and AI diagnosis. <br>All in one
+            easy-to-use platform.
+          </p>
+          <div class="social-media">
+            <a href=""><img src="/static/images/Icons/google.png" alt="Google"></a>
+            <a href=""><img src="/static/images/Icons/facebook.png" alt="Facebook"></a>
+            <a href=""><img src="/static/images/Icons/twitter.png" alt="Twitter"></a>
+            <a href=""><img src="/static/images/Icons/instagram.png" alt="Instagram"></a>
+          </div>
+        </div>
+      </div>
+      <div class="firstlayer">
+        <div class="company">
+          <p><span>Company</span></p>
+          <a href="/about">About us</a>
+          <a href="/about">Our mission</a>
+          <a href="/about">Our Team</a>
+        </div>
+        <div class="company">
+          <p><span>Our Services</span></p>
+          <a href="/clinicSearch">Clinic Search</a>
+          <a href="/sign-up">AI-Based Diagnosis</a>
+          <a href="/contact">Contact Us</a>
+        </div>
+        <div class="company">
+          <p><span>Legal</span></p>
+          <a href="/terms">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/terms">Security</a>
+        </div>
+      </div>
+    </div>
+    <!-- Back to top arrow -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <img src="/static/images/Icons/up-arrow.svg" />
+    </button>
+    <div class="lastlayer">
+      <p class="copyright">Copyright &copy; 2024. Medlorix. All rights reserved</p>
+      <div>
+        <a href="/terms"><p>Terms and Conditions </p></a>
+        <a href="/terms"><p>Privacy Policy</p></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
